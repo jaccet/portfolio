@@ -3,36 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jaccet@dev</title>
+    <title id="my-github-account">jaccet@dev</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 </head>
-<body>
-    <div class="container" onclick="changeHamburgerIcon(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-    </div>
+<body class="content">
+    <header class="header">
+        <div class="flex-container-header">
+            <div class="flex-child topbar-start">
+                <div class="flex-container-hamburger" onclick="onHamburgerClick(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+              </div>
+              <div class="flex-child topbar-end">
+                <div class="dropdown-menu" onclick="toggleTopDropdown(this)">
+                    <div class="dropdown-menu-content">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="triangle-box">
+                    <div class="toptriangle" id="toptriangle-icon"></div>
+                </div>
+              </div>
+        </div>
+    </header>
     <div class="karla">
-        <header>
-            <h1>Welcome to My Portfolio</h1>
-        </header>
-        <main>
-            <section>
-                <h2>About Me</h2>
-                <p>This is a brief introduction about yourself.</p>
-            </section>
-            <section>
-                <h2>Projects</h2>
-                <p>Details about your projects will go here.</p>
-            </section>
-        </main>
-    </div>
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
-    <script src="assets/scripts/script.js"></script>
-</body>
-</html>
+        <div class="flex-container">
+            <div class="name-icon-container">
+            <header>
+                <h1>Jaakko Jartti</h1>
+                <img src="/assets/img/placeholder.png" class="main-image">
+            </header>
+            </div>
+            <div class="flex-container-text">
+            <main>
+                <section>
+                    <h2>About Me</h2>
+                    <p>I am a <b class="bolded-text">software development</b> student studying at the <b
+                            class="bolded-text">Oulu University of Applied Sciences</b>.<br>
+                        Mostly, I have done work in the C languages, such as C and C++.
+                        On top of that I have also worked with JavaScript in an ATM simulation project. </p>
+                </section>
+                <section>
+                    <h2>Projects</h2>
+                    <p>Listed below are my current projects:<br></p>
+                    <div class="flex-container-projects">
+                        <div class="project-card" id="MyBankSimul" onclick="toggleDropdown(this)">
+                            <img src="/assets/img/github.png" class="icon-small">
+                            <h3>MyBankSimul aka ATM Simulator</h3>
+                            <div class="triangle" id="triangleicon1"></div>
+                            <div class="dropdown-content">
+                                <div id="ATMSimReadme" class="markdown-body" style="color: white;"></div>
+                            </div>
+                    </div>
+                </section>
+            </main>
+            </div>
+            <footer id="footer">
+                <div class="container-fluid details">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Contact Information</h3>
+                            <ul>
+                                <li>Email: jaccet@example.com</li>
+                                <li>Phone: +1 123-456-7890</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Social Media</h3>
+                            <div class="media-links">
+                                <a href="#"><img src="/assets/img/twitter.png" class="icon-small"></a></li>
+                                <a href="#"><img src="/assets/img/github.png" class="icon-small"></a></li>
+                                <a href="#"><img src="/assets/img/linkedin-logo.png" class="icon-small"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Address</h3>
+                            <p>123 Main St, City,
+                        </div>
+                        <p>&copy; 2024 Jaakko Jartti</p>
+            </footer>
+        </div>
+        </div>
+        <script src="assets/scripts/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        </body>
+        
+        </html>
