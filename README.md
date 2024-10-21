@@ -1,5 +1,7 @@
 # My Portfolio Site
 
+The site is hosted at https://jaccet.github.io/portfolio/
+
 ## HTML
 
 ### Basic HTML Structure
