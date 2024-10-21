@@ -118,3 +118,7 @@ document.addEventListener("click", function (event) {
         });
     }
 });
+
+function sayHello() {
+    alert('Hello!');
+}
